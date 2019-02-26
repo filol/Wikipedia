@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
         sh '''npm i
-npm run build'''
+npm run build
+cp -rf dist/ /var/www/html/Wikipedia/dist/'''
       }
     }
   }
